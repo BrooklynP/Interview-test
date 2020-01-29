@@ -10,18 +10,22 @@ public users = [];
 
   constructor(private api: ApiService) {
     // Get users when we start the service
-    this.getUsers();
+    this.updateUsers();
    }
 
 // Get all users
-getUsers(){
+updateUsers(){
   this.api.get('users').then((users: Array<any>) =>{
     this.users = users;
+    console.log(users);
   });
+}
+getUsers(){
+  return this.users;
 }
 // Get Single User Record
 getUser(userID: string){
 // Using the 'userID' parameter, create the correct string for the api.get() function
-  return this.api.get('...');
+  return this.api.get('users/' + userID);
 }
 }

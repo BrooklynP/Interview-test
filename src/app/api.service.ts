@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  get(path: string){
+  get(path: string) {
     return this.http.get(`https://jsonplaceholder.typicode.com/${path}`).toPromise();
   }
 }
