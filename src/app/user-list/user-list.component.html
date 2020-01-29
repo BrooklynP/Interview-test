@@ -2,12 +2,6 @@
 
 <ul>
   <li *ngFor="let user of this.usersService.getUsers()"  [routerLink]="['/profile', user.id]">
-
-    <!-- Use *ngFor to loop through the users stored in the users service (users.users) instead of the sample user -->
-
       {{user.name}}
-
-
-
   </li>
 </ul>
