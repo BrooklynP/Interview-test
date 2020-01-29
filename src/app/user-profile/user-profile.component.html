@@ -1,14 +1,11 @@
 <div *ngIf="getUser()">
-    <h1>ID</h1>
-    <p>{{getUser().id}}</p>
-    <h1>Name</h1>
-    <p>{{getUser().name}}</p>
-    <h1>Username</h1>
-    <p>{{getUser().username}}</p>
-    <h1>Email Address</h1>
-    <p>{{getUser().email}}</p>
-    <h1>Website</h1>
-    <p>{{getUser().website}}</p>
-    <h1>Company</h1>
-    <p>{{getUser().company.name}}: <small>{{getUser().company.catchPhrase}}</small></p>
+
+    <header>
+        <h1>{{getUser().name}} </h1>
+    </header>
+        <p><strong>Username</strong> {{getUser().username}}</p>
+        <p><strong>Email Address</strong> {{getUser().email}}</p>
+        <p><strong>Website</strong> {{getUser().website}}</p>
+        <p><strong>Company</strong> {{getUser().company.name}}: <small>{{getUser().company.catchPhrase}}</small></p>
+        <p><strong>ID</strong> {{getUser().id}}</p>
 </div>

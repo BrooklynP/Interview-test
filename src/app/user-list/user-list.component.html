@@ -1,12 +1,13 @@
-<h3>User List</h3>
+<h1>User List</h1>
 
-<div *ngFor="let user of this.usersService.getUsers()">
+<ul>
+  <li *ngFor="let user of this.usersService.getUsers()"  [routerLink]="['/profile', user.id]">
 
     <!-- Use *ngFor to loop through the users stored in the users service (users.users) instead of the sample user -->
 
-    <a [routerLink]="['/profile', user.id]">
-        {{user.name}}
-      </a>
+      {{user.name}}
 
 
-</div>
+
+  </li>
+</ul>
